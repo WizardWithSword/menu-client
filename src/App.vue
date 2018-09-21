@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
+    <Button type="info">Info</Button>
+    <Button type="success">Success</Button>
+    <Button type="warning">Warning</Button>
+    <Button type="error">Error</Button>
   </div>
 </template>
 
