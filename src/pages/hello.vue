@@ -1,11 +1,16 @@
 <template>
   <div class="">
-    {{name}}
+    {{msg}}
   </div>
 </template>
 <script>
 export default {
-  name: ''
+  name: '',
+  data: function () {
+    return {
+      msg: 'welcome'
+    }
+  }
 }
 </script>
 <style type="text/css">

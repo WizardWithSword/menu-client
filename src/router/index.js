@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/pages/hello.vue'
+import Index from '@/pages/index.vue'
 import Login from '@/pages/login.vue'
+// import Reg from '@/pages/reg.vue'
 
 Vue.use(Router)
 
@@ -19,10 +20,6 @@ export default new Router({
     }, {
       path: '/reg',
       name: 'reg',
-      component: Login
-    }, {
-      path: '/user/set',
-      name: 'userSet',
       component: Login
     }, {
       path: '/user/set',
