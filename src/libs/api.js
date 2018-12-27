@@ -66,77 +66,107 @@ Apixhr.prototype._init = function (method, url, params) {
 var allApi = {
   reg: function (params) {
     return (new Apixhr('POST', '/api/shop/user/reg', params)).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   login: function (params) {
     return new Apixhr('POST', '/api/shop/user/login', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   uinfoDetail: function (params) {
     return new Apixhr('GET', '/api/shop/user/detail', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   uinfoEdit: function (params) {
     return new Apixhr('POST', '/api/shop/user/edit', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   restAdd: function (params) {
     return new Apixhr('POST', '/api/shop/restaurants/add', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   restList: function (params) {
     return new Apixhr('POST', '/api/shop/restaurants/list', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   restDetail: function (params) {
     return new Apixhr('GET', '/api/shop/restaurants/detail', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   restEdit: function (params) {
     return new Apixhr('POST', '/api/shop/restaurants/edit', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   menuDetail: function (params) {
     return new Apixhr('GET', '/api/shop/menu/list', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   menuEdit: function (params) {
     return new Apixhr('POST', '/api/shop/menu/edit', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   deskDetail: function (params) {
     return new Apixhr('GET', '/api/shop/desk/list', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   deskEdit: function (params) {
     return new Apixhr('POST', '/api/shop/desk/edit', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   orderEndDetail: function (params) {
     return new Apixhr('POST', '/api/shop/order/list/end', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   orderIngDetail: function (params) {
     return new Apixhr('POST', '/api/shop/order/list/ing', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   },
   orderEdit: function (params) {
     return new Apixhr('POST', '/api/shop/order/edit/status', params).then(function (res) {
-      return common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      var resjson = common.s.dec(res.s, common.localData.get('tk') || 'undefined')
+      console.log('请求返回值：', resjson)
+      return resjson
     })
   }
 }

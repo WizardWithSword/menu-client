@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/index.vue'
 import Login from '@/pages/login.vue'
-// import Reg from '@/pages/reg.vue'
-
+import Reg from '@/pages/reg.vue'
+import Userinfo from '@/pages/userinfo'
 Vue.use(Router)
 
 export default new Router({
@@ -12,7 +12,12 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: Index
+      component: Index,
+      children: [{
+        path: '/index',
+        name: 'index2',
+        component: Index
+      }]
     }, {
       path: '/login',
       name: 'login',
@@ -20,11 +25,15 @@ export default new Router({
     }, {
       path: '/reg',
       name: 'reg',
-      component: Login
+      component: Reg
+    }, {
+      path: '/user',
+      name: 'user',
+      component: Userinfo
     }, {
       path: '/user/set',
       name: 'userSet',
-      component: Login
+      component: Userinfo
     }, {
       path: '/user/restaurant',
       name: 'userRestaurant',
