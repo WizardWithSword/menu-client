@@ -56,6 +56,7 @@ Apixhr.prototype._init = function (method, url, params) {
     }
     var body = typeof params === 'string' ? params : JSON.stringify(params)
     var secbodyobj = {}
+    console.log('发送的请求:', url, body)
     secbodyobj.s = common.s.enc(body, token)
     var secbody = JSON.stringify(secbodyobj)
     xhr.send(secbody)

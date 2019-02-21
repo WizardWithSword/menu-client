@@ -4,6 +4,9 @@ import Index from '@/pages/index.vue'
 import Login from '@/pages/login.vue'
 import Reg from '@/pages/reg.vue'
 import Userinfo from '@/pages/userinfo'
+import Rest from '@/pages/restaurant'
+import Menu from '@/pages/menu'
+import Desk from '@/pages/desk'
 Vue.use(Router)
 
 export default new Router({
@@ -37,21 +40,29 @@ export default new Router({
     }, {
       path: '/user/restaurant',
       name: 'userRestaurant',
-      component: Login
+      component: Rest
     }, {
       path: '/user/menu',
       name: 'userMenuList',
-      component: Login,
+      component: Menu,
       children: [{
         path: '/user/menu/edit/rid/:rid',
         name: 'userMenuEdit',
         component: Login
+      }, {
+        path: '/user/menu/rid/:rid',
+        name: 'userMenuList',
+        component: Login
       }]
     }, {
-      path: '/user/desk/rid/:rid',
+      path: '/user/desk',
       name: 'userDeskList',
-      component: Login,
+      component: Desk,
       children: [{
+        path: '/user/desk/rid/:rid',
+        name: 'userDeskList',
+        component: Desk
+      }, {
         path: '/user/desk/edit/rid/:rid',
         name: 'userDeskEdit',
         component: Login

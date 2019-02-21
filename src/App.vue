@@ -72,10 +72,13 @@ export default {
       console.log('there', name)
       switch (name) {
         case '2-1':
+          this.$router.push({name: 'userRestaurant'})
           break
         case '2-2':
+          this.$router.push({name: 'userMenuList'})
           break
         case '2-3':
+          this.$router.push({name: 'userDeskList'})
           break
       }
     },
